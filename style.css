@@ -1,0 +1,105 @@
+body {
+    background-color: #0b0f16;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #1b1e25;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #00c2c7;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00a1a3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el contenido */
+    margin-top: 50px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hace la imagen circular */
+    overflow: hidden; /* Asegura que el contenido extra quede recortado */
+    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionar */
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.button {
+    background-color: #1b1e25;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 300px;
+    height: 60px;
+}
+
+.button-icon {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    border-color: #00c2c7;
+}
+
+.button-link {
+    text-decoration: none;
+    display: flex; /* Mantiene la estructura de los botones */
+    justify-content: center; /* Centra los botones */
+}

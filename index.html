@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phygital Kimmby</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Agrega Material Icons -->
+    <link rel="icon" href="https://s3.amazonaws.com/botgen/Uploads/LogoGPFOf_1720642733.png" type="image/png"> <!-- Favicon -->
+</head>
+<body>
+    <!-- Formulario de acceso -->
+    <div class="form-container" id="form-section">
+        <h2>Formulario de acceso</h2>
+        <form id="access-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <label for="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                Autorizo el uso de mis datos personales
+            </label>
+            <button type="submit" id="submit-btn">Continuar</button>
+        </form>
+        <div id="error-message" style="color: red; display: none;">
+            Por favor complete todos los campos y acepte la política de privacidad.
+        </div>
+    </div>
+
+    <!-- Landing Page -->
+    <div class="container" id="landing-page" style="display: none;">
+        <img src="https://s3.amazonaws.com/botgen/Uploads/K_1727989144.png" alt="Phygital Siigo Logo" class="logo circular-image">
+        <h2>Kimby 🍗🐥 </h2>
+        <div class="button-container">
+            <a href="https://s3.amazonaws.com/botgen/Uploads/2024-10-03-14-37-38_1727984435.mp4" class="button-link" target="_blank">
+                <button class="button">
+                    <img src="https://s3.amazonaws.com/botgen/Uploads/Youtube_logo_1727986865.png" alt="Keywords Icon" class="button-icon">
+                    Video gamificación
+                </button>
+            </a>
+            <a href="https://interacty.me/projects/292da3a9dac3bd5f" class="button-link" target="_blank">
+                <button class="button">
+                    <img src="https://s3.amazonaws.com/botgen/Uploads/EncuentraElPar_1727986502.png" alt="Keywords Icon" class="button-icon">
+                    Encuentre el par
+                </button>
+            </a>
+            <a href="https://interacty.me/projects/611ae2a3f02ff936" class="button-link" target="_blank">
+                <button class="button">
+                    <img src="https://s3.amazonaws.com/botgen/Uploads/Puzzle_1727986819.png" alt="Keywords Icon" class="button-icon">
+                    Puzzle
+                </button>
+            </a>
+            <a href="https://interacty.me/projects/ea162e34ab76e337" class="button-link" target="_blank">
+                <button class="button">
+                    <img src="https://s3.amazonaws.com/botgen/Uploads/ObjetosOcultos_1727986777.png" alt="Keywords Icon" class="button-icon">
+                    Encontrar los objetos
+                </button>
+            </a>
+            <a href="https://s3.amazonaws.com/botgen/Uploads/Puzzle_1727986591.png" class="button-link" target="_blank">
+                <button class="button">
+                    <img src="https://s3.amazonaws.com/botgen/Uploads/Crucigrama_1727986399.png" alt="Keywords Icon" class="button-icon">
+                    Crucigrama
+                </button>
+            </a>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
