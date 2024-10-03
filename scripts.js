@@ -12,21 +12,27 @@ document.getElementById('access-form').addEventListener('submit', function(event
 
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const age = document.getElementById('age').value.trim();
     const consent = document.getElementById('consent').checked;
     const errorMessage = document.getElementById('error-message');
 
     // Validación de campos
-    if (name && email && consent) {
+    if (name && email && phone && age && consent) {
         errorMessage.style.display = 'none'; // Oculta el mensaje de error
 
         // Guardar los datos en el localStorage
         localStorage.setItem('kimbyName', name);
         localStorage.setItem('kimbyEmail', email);
+        localStorage.setItem('kimbyPhone', phone);
+        localStorage.setItem('kimbyAge', age);
 
         // Datos a enviar a la API
         const formData = {
             name: name,
-            email: email
+            email: email,
+            phone: phone,
+            age: age
         };
 
         // Envío de datos a la API
