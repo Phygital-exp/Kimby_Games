@@ -23,23 +23,18 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
-input[type="number"],
 button {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
-    font-size: 1rem; /* Ajusta el tamaño de fuente para uniformar los campos */
-    box-sizing: border-box; /* Incluye el padding y borde dentro del ancho del campo */
 }
 
 button {
     background-color: #00c2c7;
     color: white;
     cursor: pointer;
-    font-weight: bold; /* Opcional: hace que el texto del botón sea más visible */
 }
 
 button:hover {
