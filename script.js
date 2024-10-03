@@ -1,15 +1,6 @@
-// Al cargar la página, verifica si ya existen datos en el localStorage
-window.onload = function() {
-    if (localStorage.getItem('kimbyName') && localStorage.getItem('kimbyEmail')) {
-        // Si los datos existen, mostrar la landing page directamente
-        document.getElementById('form-section').style.display = 'none';
-        document.getElementById('landing-page').style.display = 'block';
-    }
-};
-
 document.getElementById('access-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío del formulario por defecto
-    
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const consent = document.getElementById('consent').checked;
