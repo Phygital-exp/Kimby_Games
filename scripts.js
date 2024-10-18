@@ -1,38 +1,43 @@
-// Al cargar la página, verifica si ya existen datos en el localStorage
+// Al cargar la página, eliminar cualquier dato previamente guardado en el localStorage
 window.onload = function() {
-    if (localStorage.getItem('kimbyName') && localStorage.getItem('kimbyEmail')) {
-        // Si los datos existen, mostrar la landing page directamente
-        document.getElementById('form-section').style.display = 'none';
-        document.getElementById('landing-page').style.display = 'block';
-    }
+    // Limpia el localStorage para asegurar que siempre se muestre el formulario de acceso
+    localStorage.removeItem('kimbyName');
+    localStorage.removeItem('kimbyEmail');
+    localStorage.removeItem('kimbyAge');
+    localStorage.removeItem('kimbyPhone');
+
+    // Mostrar el formulario de acceso
+    document.getElementById('form-section').style.display = 'block';
+    document.getElementById('landing-page').style.display = 'none';
 };
 
+// Manejar el envío del formulario de acceso
 document.getElementById('access-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío del formulario por defecto
-
+    
     const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
     const age = document.getElementById('age').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
     const consent = document.getElementById('consent').checked;
     const errorMessage = document.getElementById('error-message');
 
     // Validación de campos
-    if (name && email && phone && age && consent) {
+    if (name && age && phone && email && consent) {
         errorMessage.style.display = 'none'; // Oculta el mensaje de error
 
         // Guardar los datos en el localStorage
         localStorage.setItem('kimbyName', name);
-        localStorage.setItem('kimbyEmail', email);
-        localStorage.setItem('kimbyPhone', phone);
         localStorage.setItem('kimbyAge', age);
+        localStorage.setItem('kimbyPhone', phone);
+        localStorage.setItem('kimbyEmail', email);
 
         // Datos a enviar a la API
         const formData = {
             name: name,
-            email: email,
+            age: age,
             phone: phone,
-            age: age
+            email: email
         };
 
         // Envío de datos a la API
