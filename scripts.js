@@ -21,7 +21,7 @@ document.getElementById('access-form').addEventListener('submit', function(event
     const errorMessage = document.getElementById('error-message');
 
     // Validación de campos
-    if (name && age && phone && consent) {
+    if (name !== "" && age !== "" && phone !== "" && consent) {
         errorMessage.style.display = 'none'; // Oculta el mensaje de error
 
         // Guardar los datos en el localStorage
@@ -62,5 +62,6 @@ document.getElementById('access-form').addEventListener('submit', function(event
     } else {
         // Mostrar mensaje de error si los campos no están completos
         errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Por favor complete todos los campos y acepte la política de privacidad.';
     }
 });
