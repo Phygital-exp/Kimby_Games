@@ -1,9 +1,7 @@
-// Al cargar la página, eliminar cualquier dato previamente guardado en el localStorage
+// Al cargar la página, asegurarse de que siempre se muestre el formulario
 window.onload = function() {
-    // Limpia el localStorage para asegurar que siempre se muestre el formulario de acceso
-    localStorage.removeItem('kimbyName');
-    localStorage.removeItem('kimbyAge');
-    localStorage.removeItem('kimbyPhone');
+    // Limpiar el localStorage para que siempre se muestre el formulario al recargar
+    localStorage.clear();
 
     // Mostrar el formulario de acceso
     document.getElementById('form-section').style.display = 'block';
@@ -12,17 +10,17 @@ window.onload = function() {
 
 // Manejar el envío del formulario de acceso
 document.getElementById('access-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío del formulario por defecto
-    
+    event.preventDefault(); // Evitar el envío del formulario por defecto
+
     const name = document.getElementById('name').value.trim();
     const age = document.getElementById('age').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const consent = document.getElementById('consent').checked;
     const errorMessage = document.getElementById('error-message');
 
-    // Validación de campos
-    if (name !== "" && age !== "" && phone !== "" && consent) {
-        errorMessage.style.display = 'none'; // Oculta el mensaje de error
+    // Validación de campos: asegurarse de que no estén vacíos y que el checkbox esté marcado
+    if (name && age && phone && consent) {
+        errorMessage.style.display = 'none'; // Ocultar el mensaje de error
 
         // Guardar los datos en el localStorage
         localStorage.setItem('kimbyName', name);
@@ -61,7 +59,7 @@ document.getElementById('access-form').addEventListener('submit', function(event
         });
     } else {
         // Mostrar mensaje de error si los campos no están completos
-        errorMessage.style.display = 'block';
         errorMessage.textContent = 'Por favor complete todos los campos y acepte la política de privacidad.';
+        errorMessage.style.display = 'block';
     }
 });
