@@ -1,5 +1,7 @@
 body {
-    background-color: #0b0f16;
+    background-image: url('https://s3.amazonaws.com/botgen/Uploads/fondokimby_1729109659.PNG');
+    background-size: cover;
+    background-position: center;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
@@ -11,95 +13,73 @@ body {
     max-width: 400px;
     margin: 100px auto;
     padding: 20px;
-    background-color: #1b1e25;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-label {
-    display: block;
-    margin: 15px 0 5px;
-}
-
-input[type="text"],
-input[type="email"],
-button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-}
-
-button {
-    background-color: #00c2c7;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #00a1a3;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar el contenido */
-    margin-top: 50px;
-}
-
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Hace la imagen circular */
-    overflow: hidden; /* Asegura que el contenido extra quede recortado */
-    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionar */
-    margin-bottom: 20px;
-}
-
-h2 {
-    margin: 20px 0;
+.header-image {
+    width: 100%; /* Ajustar el ancho completo de la pantalla */
+    max-width: 500px; /* Limitar el tamaño máximo */
+    margin: 20px auto; /* Centrar la imagen */
+    display: block; /* Asegura que la imagen sea tratada como bloque */
 }
 
 .button-container {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar los botones */
-    gap: 10px; /* Espacio entre los botones */
+    flex-direction: row;
+    justify-content: center; /* Centra todos los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    gap: 40px; /* Espacio uniforme entre los botones */
+    margin: 40px auto; /* Espacio superior e inferior y centrado automático */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    padding: 20px; /* Agregar un pequeño relleno para separación */
 }
 
 .button {
-    background-color: #1b1e25;
-    border: 2px solid white;
-    border-radius: 25px;
-    color: white;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados */
+    color: #e10000;
     font-size: 1.2rem;
-    padding: 10px 20px;
-    margin: 10px 0;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around; /* Asegura que el contenido se distribuya de forma uniforme */
     cursor: pointer;
-    transition: transform 0.3s;
-    width: 300px;
-    height: 60px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    width: 320px; /* Aumenta el ancho */
+    height: 500px; /* Aumenta la altura */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más visible */
+    text-align: center;
+    position: relative;
+}
+
+.button-title {
+    font-size: 2.0rem; /* Títulos más grandes */
+    font-weight: bold;
+    margin-top: 15px;
 }
 
 .button-icon {
-    margin-right: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 300px; /* Tamaño más grande */
+    height: 300px; /* Tamaño más grande */
+    margin-top: 0; /* Ajusta la posición para centrar */
+    object-fit: cover; /* Mantener la proporción de las imágenes */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 10px; /* Opcional: borde redondeado */
 }
+
 
 .button:hover {
     transform: scale(1.05);
-    border-color: #00c2c7;
+    background-color: #ff5722; /* Color anaranjado al hacer hover */
+    color: white; /* Cambia el color del texto a blanco al hacer hover */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
 }
 
 .button-link {
     text-decoration: none;
-    display: flex; /* Mantiene la estructura de los botones */
-    justify-content: center; /* Centra los botones */
+    width: 100%;
 }
