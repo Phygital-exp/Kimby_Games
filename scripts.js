@@ -21,7 +21,7 @@ document.getElementById('access-form').addEventListener('submit', function(event
     const errorMessage = document.getElementById('error-message');
 
     // Validación de campos
-    if (name && age && phone && email && consent) {
+    if (name && age && phone && consent) {
         errorMessage.style.display = 'none'; // Oculta el mensaje de error
 
         // Guardar los datos en el localStorage
