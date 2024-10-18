@@ -2,7 +2,6 @@
 window.onload = function() {
     // Limpia el localStorage para asegurar que siempre se muestre el formulario de acceso
     localStorage.removeItem('kimbyName');
-    localStorage.removeItem('kimbyEmail');
     localStorage.removeItem('kimbyAge');
     localStorage.removeItem('kimbyPhone');
 
@@ -18,7 +17,6 @@ document.getElementById('access-form').addEventListener('submit', function(event
     const name = document.getElementById('name').value.trim();
     const age = document.getElementById('age').value.trim();
     const phone = document.getElementById('phone').value.trim();
-    const email = document.getElementById('email').value.trim();
     const consent = document.getElementById('consent').checked;
     const errorMessage = document.getElementById('error-message');
 
@@ -30,14 +28,12 @@ document.getElementById('access-form').addEventListener('submit', function(event
         localStorage.setItem('kimbyName', name);
         localStorage.setItem('kimbyAge', age);
         localStorage.setItem('kimbyPhone', phone);
-        localStorage.setItem('kimbyEmail', email);
-
+        
         // Datos a enviar a la API
         const formData = {
             name: name,
             age: age,
             phone: phone,
-            email: email
         };
 
         // Envío de datos a la API
