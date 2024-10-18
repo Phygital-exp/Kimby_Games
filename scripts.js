@@ -28,12 +28,12 @@ document.getElementById('access-form').addEventListener('submit', function(event
         localStorage.setItem('kimbyName', name);
         localStorage.setItem('kimbyAge', age);
         localStorage.setItem('kimbyPhone', phone);
-        
+
         // Datos a enviar a la API
         const formData = {
             name: name,
             age: age,
-            phone: phone,
+            phone: phone
         };
 
         // Envío de datos a la API
