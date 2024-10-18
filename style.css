@@ -27,13 +27,54 @@ body {
 
 .button-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Horizontal por defecto */
     justify-content: center; /* Centra todos los elementos horizontalmente */
     align-items: center; /* Alinea verticalmente */
     gap: 40px; /* Espacio uniforme entre los botones */
     margin: 40px auto; /* Espacio superior e inferior y centrado automático */
     max-width: 1200px; /* Ancho máximo del contenedor */
     padding: 20px; /* Agregar un pequeño relleno para separación */
+    flex-wrap: nowrap; /* No permitir que los botones se envuelvan */
+}
+
+/* Mantener la disposición horizontal para pantallas grandes y medianas */
+@media (max-width: 1200px) {
+    .button-container {
+        flex-wrap: wrap; /* Permitir que los botones se envuelvan si es necesario */
+    }
+
+    .button {
+        width: 280px; /* Ajustar el ancho en tabletas */
+        height: 450px; /* Ajustar la altura en tabletas */
+    }
+    
+    .button-icon {
+        width: 220px; /* Tamaño más pequeño de los íconos en tabletas */
+        height: 220px;
+    }
+}
+
+/* Cambiar a disposición vertical solo en pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Disponer los botones en columna en pantallas más pequeñas */
+        gap: 20px; /* Reducir el espacio entre botones */
+        padding: 10px; /* Ajustar el padding para pantallas más pequeñas */
+    }
+    
+    .button {
+        width: 80%; /* Ajustar el ancho al 80% de la pantalla en móviles */
+        height: 400px; /* Reducir la altura en móviles */
+    }
+    
+    .button-icon {
+        width: 180px; /* Tamaño más pequeño de los íconos en móviles */
+        height: 180px;
+    }
+    
+    .button-title {
+        font-size: 1.5rem; /* Ajustar el tamaño del título en móviles */
+    }
 }
 
 .button {
@@ -70,7 +111,6 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
     border-radius: 10px; /* Opcional: borde redondeado */
 }
-
 
 .button:hover {
     transform: scale(1.05);
