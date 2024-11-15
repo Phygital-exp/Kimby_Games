@@ -1,41 +1,3 @@
-.video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black; /* Fondo negro */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
-}
-
-#continue-button {
-    position: absolute;
-    bottom: 20px;
-    right: 100px; /* Ajusta para posicionarlo en la esquina */
-    padding: 10px 20px;
-    background-color: #ff8903;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1100; /* Para que se muestre sobre el video */
-    width: auto; /* Ajusta el ancho automáticamente al contenido del botón */
-}
-
-#continue-button:hover {
-    background-color: #e07a02;
-}
-
 body {
     background-image: url('https://s3.amazonaws.com/botgen/Uploads/fondokimby_1729109659.PNG');
     background-size: cover;
@@ -93,6 +55,43 @@ input[type="tel"] {
 
 input[type="checkbox"] {
     margin-right: 5px;
+}
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+}
+
+#continue-button {
+    position: absolute;
+    bottom: 20px;
+    right: 100px; /* Ajusta para posicionarlo en la esquina */
+    padding: 10px 20px;
+    background-color: #ff8903;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100; /* Para que se muestre sobre el video */
+    width: auto; /* Ajusta el ancho automáticamente al contenido del botón */
+}
+
+#continue-button:hover {
+    background-color: #e07a02;
 }
 
 button {
