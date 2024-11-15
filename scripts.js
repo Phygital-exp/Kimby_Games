@@ -1,12 +1,23 @@
-// Al cargar la página, asegurarse de que siempre se muestre el formulario
+// Al cargar la página, siempre mostrar el video de introducción
 window.onload = function() {
-    // Limpiar el localStorage para que siempre se muestre el formulario al recargar
-    localStorage.clear();
+    localStorage.clear(); // Limpiar localStorage en cada carga para siempre mostrar el formulario
 
-    // Mostrar el formulario de acceso
-    document.getElementById('form-section').style.display = 'block';
+    // Mostrar el video de introducción
+    document.getElementById('video-section').style.display = 'flex';
+    document.getElementById('form-section').style.display = 'none';
     document.getElementById('landing-page').style.display = 'none';
 };
+
+// Configurar el video para que se reproduzca en bucle y a volumen completo
+const video = document.getElementById('intro-video');
+video.volume = 1; // Volumen al 100%
+
+// Botón "Continuar" para avanzar al formulario de acceso
+document.getElementById('continue-button').addEventListener('click', function() {
+    // Ocultar el video y mostrar el formulario de acceso
+    document.getElementById('video-section').style.display = 'none';
+    document.getElementById('form-section').style.display = 'block';
+});
 
 // Manejar el envío del formulario de acceso
 document.getElementById('access-form').addEventListener('submit', function(event) {
