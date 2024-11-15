@@ -9,60 +9,13 @@ body {
     padding: 0;
 }
 
-.form-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 30px 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
-    border-radius: 15px; /* Bordes más redondeados */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    text-align: left; /* Alinear el contenido a la izquierda */
-}
-
-.form-container h2 {
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-align: center; /* Centrar el título */
-}
-
-label {
-    display: block;
-    font-size: 0.9rem;
-    color: #ffffff;
-    margin: 10px 0 5px; /* Separar las etiquetas de los campos */
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="tel"] {
-    width: calc(100% - 20px); /* Ocupa el ancho del contenedor */
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    outline: none;
-}
-
-input[type="number"],
-input[type="tel"] {
-    width: calc(48% - 10px); /* Dos campos en una línea */
-    display: inline-block;
-    margin-right: 4%;
-}
-
-input[type="checkbox"] {
-    margin-right: 5px;
-}
 .video-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; /* Fondo negro */
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,13 +25,13 @@ input[type="checkbox"] {
 video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+    object-fit: cover;
 }
 
 #continue-button {
     position: absolute;
     bottom: 20px;
-    right: 100px; /* Ajusta para posicionarlo en la esquina */
+    right: 20px;
     padding: 10px 20px;
     background-color: #ff8903;
     color: white;
@@ -86,38 +39,52 @@ video {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 1100; /* Para que se muestre sobre el video */
-    width: auto; /* Ajusta el ancho automáticamente al contenido del botón */
+    z-index: 1100;
 }
 
 #continue-button:hover {
     background-color: #e07a02;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff5722;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    color: #ffffff;
+}
+
+.form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-button:hover {
-    background-color: #e04d1b;
-}
-
-#consent {
-    display: inline-block;
-}
-
-.form-container div {
-    color: #ffcccc;
+label {
+    display: block;
     font-size: 0.9rem;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 input:focus {
@@ -125,108 +92,141 @@ input:focus {
     box-shadow: 0 0 5px rgba(255, 87, 34, 0.5);
 }
 
-.header-image {
-    width: 100%; /* Ajustar el ancho completo de la pantalla */
-    max-width: 500px; /* Limitar el tamaño máximo */
-    margin: 20px auto; /* Centrar la imagen */
-    display: block; /* Asegura que la imagen sea tratada como bloque */
+#submit-btn {
+    background-color: #ff8903; /* Color naranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
 }
 
-.button-container {
+#submit-btn:hover {
+    background-color: #e07a02; /* Color naranja más oscuro al pasar el cursor */
+}
+
+/* Estilos para el checkbox del formulario */
+.form-check-input:checked {
+    background-color: #ff8903; /* Color naranja */
+    border-color: #ff8903;
+}
+
+.form-check-input {
+    border-radius: 0.25em;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.3em;
+}
+
+.form-check-label {
+    color: #ffffff;
+    margin-left: 0.5em;
+}
+
+/* Asegurar que el label del checkbox esté alineado correctamente */
+.form-check {
     display: flex;
-    flex-direction: row; /* Horizontal por defecto */
-    justify-content: center; /* Centra todos los elementos horizontalmente */
-    align-items: center; /* Alinea verticalmente */
-    gap: 40px; /* Espacio uniforme entre los botones */
-    margin: 40px auto; /* Espacio superior e inferior y centrado automático */
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    padding: 20px; /* Agregar un pequeño relleno para separación */
-    flex-wrap: nowrap; /* No permitir que los botones se envuelvan */
+    align-items: center;
 }
 
-/* Mantener la disposición horizontal para pantallas grandes y medianas */
-@media (max-width: 1200px) {
-    .button-container {
-        flex-wrap: wrap; /* Permitir que los botones se envuelvan si es necesario */
-    }
-
-    .button {
-        width: 280px; /* Ajustar el ancho en tabletas */
-        height: 450px; /* Ajustar la altura en tabletas */
-    }
-    
-    .button-icon {
-        width: 220px; /* Tamaño más pequeño de los íconos en tabletas */
-        height: 220px;
-    }
+/* Estilos para la imagen de cabecera */
+#landing-page .header-image {
+    width: 100%;
+    max-width: 300px; /* Ajusta el tamaño máximo */
+    height: auto;
+    margin: 20px auto;
+    display: block;
 }
 
-/* Cambiar a disposición vertical solo en pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column; /* Disponer los botones en columna en pantallas más pequeñas */
-        gap: 20px; /* Reducir el espacio entre botones */
-        padding: 10px; /* Ajustar el padding para pantallas más pequeñas */
-    }
-    
-    .button {
-        width: 80%; /* Ajustar el ancho al 80% de la pantalla en móviles */
-        height: 400px; /* Reducir la altura en móviles */
-    }
-    
-    .button-icon {
-        width: 180px; /* Tamaño más pequeño de los íconos en móviles */
-        height: 180px;
-    }
-    
-    .button-title {
-        font-size: 1.5rem; /* Ajustar el tamaño del título en móviles */
-    }
-}
-
+/* Estilos para los botones */
 .button {
     background-color: #ffffff;
     border: none;
-    border-radius: 20px; /* Bordes redondeados */
+    border-radius: 20px;
     color: #e10000;
     font-size: 1.2rem;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around; /* Asegura que el contenido se distribuya de forma uniforme */
+    justify-content: space-around;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    width: 320px; /* Aumenta el ancho */
-    height: 500px; /* Aumenta la altura */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más visible */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    max-height: 500px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     position: relative;
+    margin: 0 auto;
 }
 
 .button-title {
-    font-size: 2.0rem; /* Títulos más grandes */
+    font-size: 2.0rem;
     font-weight: bold;
     margin-top: 15px;
+    color: inherit;
 }
 
 .button-icon {
-    width: 300px; /* Tamaño más grande */
-    height: 300px; /* Tamaño más grande */
-    margin-top: 0; /* Ajusta la posición para centrar */
-    object-fit: cover; /* Mantener la proporción de las imágenes */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    border-radius: 10px; /* Opcional: borde redondeado */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 0;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
+/* Efecto al pasar el cursor sobre los botones */
 .button:hover {
     transform: scale(1.05);
-    background-color: #ff5722; /* Color anaranjado al hacer hover */
-    color: white; /* Cambia el color del texto a blanco al hacer hover */
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+    background-color: #ff5722; /* Color naranja */
+    color: white;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .button-link {
     text-decoration: none;
+    color: inherit;
     width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.button-link:hover {
+    text-decoration: none;
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .button {
+        max-width: 80%;
+        max-height: 400px;
+    }
+
+    .button-icon {
+        max-width: 180px;
+    }
+
+    .button-title {
+        font-size: 1.5rem;
+    }
+
+    #landing-page .header-image {
+        max-width: 80%; /* Ajusta el tamaño en móviles */
+    }
 }
